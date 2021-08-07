@@ -8,7 +8,7 @@ function App() {
     const [data, setData] = useState({});
     const fetchFucntion = async () => {
         try {
-            const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=e60df6e194d5484cbde123139212807&q=${cityName}&aqi=no`)
+            const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=e60df6e194d5484cbde123139212807&q=${cityName}&aqi=no`)
             const data = await promise.json();
             const { name, region, country, tz_id: timeZone } = data.location;
             const { wind_kph: windSpeed, wind_dir: windDirection, pressure_in: pressure, precip_in: precipitation, humidity } = data.current;
