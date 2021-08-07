@@ -16,7 +16,7 @@ const Display = ({ data }) => {
                     <div id="cityDateAndTime">{date.toLocaleString('en-IN', { timeZone: timeZone })}</div>
                 </div>
                 <div id="weatherIcon">
-                    <img src={iconLink} />
+                    <img src={iconLink}/>
                 </div>
                 <div id="temperature">
                     {temperature}&deg;C <br />
