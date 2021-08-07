@@ -1,0 +1,42 @@
+@media only screen and (max-width: 941px){
+    html{
+        body{
+            div#app{
+                margin-top: 2rem;
+                width: 100vw;
+                div{
+                    #search{
+                        width: 20rem;
+                    }
+                }
+                div#display{
+                    width: 95vw;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 425px) {
+    html{
+        body{
+            div#app{
+                div#display{
+                    div#displayLowerPortion{
+                        grid-template-columns: repeat(2, 1fr);
+                        .layout{
+                            &:nth-child(2){
+                                border: none;
+                            }
+                            &:nth-child(3){
+                                border-top: 1px solid #CFD8DC;
+                            }
+                            &:nth-child(4){
+                                border-top: 1px solid #CFD8DC;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
