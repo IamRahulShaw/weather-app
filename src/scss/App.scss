@@ -1,188 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Itim&family=Thasadith&family=Yatra+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Itim&family=Thasadith&family=Yatra+One&display=swap");
 @mixin middle {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    width: 100vw;
-    body{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #FBFCFC;
-        div#app{
-            margin-top: 5rem;
-            @include middle();
-            width: 75%;
-            
-            // search bar
-            div{
-                &.middle{
-                    @include middle();
-                    width: max-content;
-                    height: 4rem;
-                    display: flex;
-                    align-items: center;
-                }
-                #search{
-                    height: 3rem;
-                    width: 25rem;
-                    margin-right: 1rem;
-                    outline: none;
-                    border-radius: 10px;
-                    border: 1px solid #607D8B;
-                    padding: 5px 20px;
-                    background-color: #F5F5F5;
-                    font-family: 'Itim', cursive;
-                    font-size: 20px;
-                    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-                    &:focus{
-                        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-                        transform: scale(0.98);
-                    }
-                }
-                button{
-                    font-family: 'Itim', cursive;
-                    font-size: 1.8rem;
-                    display: block;
-                    cursor: pointer;
-                    padding: 0.2rem 1rem;
-                    border-radius: 10px;
-                    border: none;
-                    outline: none;
-                    background-color: #4CAF50;
-                    color: white;
-                    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-                    &:hover{
-                        background-color: #2E7D32;
-                    }
-                    &:active{
-                        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-                        transform: scale(0.98);
-                    }
-                }
-            }
-            // display
-            div#display{
-                width: 70rem;
-                margin: 1.5rem auto;
-                border-radius: 10px;
-                background-color: white;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                div#displayUpperPortion{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    div#city{
-                        margin-top: 1rem;
-                        div#cityUpperPart{
-                            font-family: 'Carter One', cursive;
-                            text-align: center;
-                            color: #29B6F6;
-                            font-size: 4rem;
-                        }
-                        div#cityLowerPart{
-                            text-align: center;
-                            font-size: 1.5rem;
-                            color: #0D47A1;
-                            font-family: 'Thasadith', sans-serif;
-                            font-weight: bold;
-                        }
-                        div#cityDateAndTime{
-                            text-align: center;
-                            font-size: 1.5rem;
-                            color: #0D47A1;
-                            font-family: 'Yatra One', cursive;
-                        }
-                    }
-                    div#weatherIcon{
-                        margin-top: 3rem;
-                        img{
-                            animation: weatherIconAnimation 2s linear infinite alternate;
-                        }
-                    }
-                    @keyframes weatherIconAnimation {
-                        from{
-                            transform: rotate(-10deg);
-                        }to{
-                            transform: rotate(10deg) scale(1.3);
-                        }
-                    }
-                    div#temperature{
-                        margin-top: 2rem;
-                        font-size: 4rem;
-                        text-align: center;
-                        font-family: 'Carter One', cursive;
-                        color: #29B6F6;
-                        div{
-                            color: #1565C0;
-                            font-weight: bold;
-                            font-size: 1.5rem;
-                            font-family: 'Thasadith', sans-serif;
-                        }
-                    }
-                }
-                div#displayLowerPortion{
-                    margin-top: 3rem;
-                    border-bottom-left-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    background-color: #EEEEEE;
-                    .layout{
-                        display: flex;
-                        justify-content: space-evenly;
-                        height: 8rem;
-                        border-right: 1px solid #CFD8DC;
-                        &:last-child{
-                            border: none;
-                        }
-                        div.dataIcon{
-                            margin: auto 0;
-                            // This icon span converted to svg automatically
-                            svg{
-                                font-size: 5rem;
-                                color: #4DD0E1;
-                            }
-                            span.caption{
-                                font-family: 'Itim', cursive;
-                                color: #1A237E
-                            }
-                            span#humidityCaption{
-                                margin-left: 0.5rem;
-                            }
-                            span#pressureCaption{
-                                margin-left: 0.5rem;
-                            }
-                        }
-                        div.data{
-                            height: fit-content;
-                            margin-top: auto;
-                            margin-bottom: auto;
-                            font-size: 1.8rem;
-                            color: #1A237E;
-                            font-family: 'Itim', cursive;
-                            span.inch{
-                                font-size: 1rem;
-                                font-family: 'Itim', cursive;
-                            }
-                        }
-                        div.number{
-                            font-size: 2.5rem;
-                            color: #1A237E;
-                        }
-                        div#humidity{
-                            margin-left: -2rem;
-                            font-size: 2.5rem;
-                        }
-                    }
-                }
-            }
-        }
+    background-color: #fbfcfc;
+    div#loader {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+    div#app {
+      margin-top: 5rem;
+      @include middle();
+      width: 75%;
+
+      // search bar
+      div {
+        &.middle {
+          @include middle();
+          width: max-content;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+        }
+        #search {
+          height: 3rem;
+          width: 25rem;
+          margin-right: 1rem;
+          outline: none;
+          border-radius: 10px;
+          border: 1px solid #607d8b;
+          padding: 5px 20px;
+          background-color: #f5f5f5;
+          font-family: "Itim", cursive;
+          font-size: 20px;
+          box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+          &:focus {
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            transform: scale(0.98);
+          }
+        }
+        button {
+          font-family: "Itim", cursive;
+          font-size: 1.8rem;
+          display: block;
+          cursor: pointer;
+          padding: 0.2rem 1rem;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          background-color: #4caf50;
+          color: white;
+          box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+          &:hover {
+            background-color: #2e7d32;
+          }
+          &:active {
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            transform: scale(0.98);
+          }
+        }
+      }
+      // display
+      div#display {
+        width: 70rem;
+        margin: 1.5rem auto;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        div#displayUpperPortion {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          div#city {
+            margin-top: 1rem;
+            div#cityUpperPart {
+              font-family: "Carter One", cursive;
+              text-align: center;
+              color: #29b6f6;
+              font-size: 4rem;
+            }
+            div#cityLowerPart {
+              text-align: center;
+              font-size: 1.5rem;
+              color: #0d47a1;
+              font-family: "Thasadith", sans-serif;
+              font-weight: bold;
+            }
+            div#cityDateAndTime {
+              text-align: center;
+              font-size: 1.5rem;
+              color: #0d47a1;
+              font-family: "Yatra One", cursive;
+            }
+          }
+          div#weatherIcon {
+            margin-top: 3rem;
+            img {
+              animation: weatherIconAnimation 2s linear infinite alternate;
+            }
+          }
+          @keyframes weatherIconAnimation {
+            from {
+              transform: rotate(-10deg);
+            }
+            to {
+              transform: rotate(10deg) scale(1.3);
+            }
+          }
+          div#temperature {
+            margin-top: 2rem;
+            font-size: 4rem;
+            text-align: center;
+            font-family: "Carter One", cursive;
+            color: #29b6f6;
+            div {
+              color: #1565c0;
+              font-weight: bold;
+              font-size: 1.5rem;
+              font-family: "Thasadith", sans-serif;
+            }
+          }
+        }
+        div#displayLowerPortion {
+          margin-top: 3rem;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          background-color: #eeeeee;
+          .layout {
+            display: flex;
+            justify-content: space-evenly;
+            height: 8rem;
+            border-right: 1px solid #cfd8dc;
+            &:last-child {
+              border: none;
+            }
+            div.dataIcon {
+              margin: auto 0;
+              // This icon span converted to svg automatically
+              svg {
+                font-size: 5rem;
+                color: #4dd0e1;
+              }
+              span.caption {
+                font-family: "Itim", cursive;
+                color: #1a237e;
+              }
+              span#humidityCaption {
+                margin-left: 0.5rem;
+              }
+              span#pressureCaption {
+                margin-left: 0.5rem;
+              }
+            }
+            div.data {
+              height: fit-content;
+              margin-top: auto;
+              margin-bottom: auto;
+              font-size: 1.8rem;
+              color: #1a237e;
+              font-family: "Itim", cursive;
+              span.inch {
+                font-size: 1rem;
+                font-family: "Itim", cursive;
+              }
+            }
+            div.number {
+              font-size: 2.5rem;
+              color: #1a237e;
+            }
+            div#humidity {
+              margin-left: -2rem;
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @import "media";

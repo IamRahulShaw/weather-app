@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Search from "./component/Search";
 import Display from "./component/Display";
+import Loader from "react-loader-spinner";
 import "./scss/App.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   const [cityName, setCityName] = useState("Kolkata");
@@ -45,7 +47,12 @@ function App() {
     }
   };
   useEffect(() => {
-    fetchFucntion();
+    const id = setTimeout(() => {
+      fetchFucntion();
+    }, 2000);
+    return () => {
+      clearTimeout(id);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -59,7 +66,17 @@ function App() {
           />
           <Display data={data} />
         </div>
-      ) : null}
+      ) : (
+        <div id="loader">
+          <Loader
+            type="BallTriangle"
+            color="#00BFFF"
+            height={150}
+            width={150}
+            timeout={3000}
+          />
+        </div>
+      )}
     </>
   );
 }

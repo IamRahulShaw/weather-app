@@ -12,7 +12,21 @@ html body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
+}
+
+html body div#loader {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html body div#app {
@@ -43,10 +57,10 @@ html body div#app div #search {
   margin-right: 1rem;
   outline: none;
   border-radius: 10px;
-  border: 1px solid #607D8B;
+  border: 1px solid #607d8b;
   padding: 5px 20px;
-  background-color: #F5F5F5;
-  font-family: 'Itim', cursive;
+  background-color: #f5f5f5;
+  font-family: "Itim", cursive;
   font-size: 20px;
   -webkit-box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
@@ -60,7 +74,7 @@ html body div#app div #search:focus {
 }
 
 html body div#app div button {
-  font-family: 'Itim', cursive;
+  font-family: "Itim", cursive;
   font-size: 1.8rem;
   display: block;
   cursor: pointer;
@@ -68,14 +82,14 @@ html body div#app div button {
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   -webkit-box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
 }
 
 html body div#app div button:hover {
-  background-color: #2E7D32;
+  background-color: #2e7d32;
 }
 
 html body div#app div button:active {
@@ -112,25 +126,25 @@ html body div#app div#display div#displayUpperPortion div#city {
 }
 
 html body div#app div#display div#displayUpperPortion div#city div#cityUpperPart {
-  font-family: 'Carter One', cursive;
+  font-family: "Carter One", cursive;
   text-align: center;
-  color: #29B6F6;
+  color: #29b6f6;
   font-size: 4rem;
 }
 
 html body div#app div#display div#displayUpperPortion div#city div#cityLowerPart {
   text-align: center;
   font-size: 1.5rem;
-  color: #0D47A1;
-  font-family: 'Thasadith', sans-serif;
+  color: #0d47a1;
+  font-family: "Thasadith", sans-serif;
   font-weight: bold;
 }
 
 html body div#app div#display div#displayUpperPortion div#city div#cityDateAndTime {
   text-align: center;
   font-size: 1.5rem;
-  color: #0D47A1;
-  font-family: 'Yatra One', cursive;
+  color: #0d47a1;
+  font-family: "Yatra One", cursive;
 }
 
 html body div#app div#display div#displayUpperPortion div#weatherIcon {
@@ -168,15 +182,15 @@ html body div#app div#display div#displayUpperPortion div#temperature {
   margin-top: 2rem;
   font-size: 4rem;
   text-align: center;
-  font-family: 'Carter One', cursive;
-  color: #29B6F6;
+  font-family: "Carter One", cursive;
+  color: #29b6f6;
 }
 
 html body div#app div#display div#displayUpperPortion div#temperature div {
-  color: #1565C0;
+  color: #1565c0;
   font-weight: bold;
   font-size: 1.5rem;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Thasadith", sans-serif;
 }
 
 html body div#app div#display div#displayLowerPortion {
@@ -187,7 +201,7 @@ html body div#app div#display div#displayLowerPortion {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 html body div#app div#display div#displayLowerPortion .layout {
@@ -198,7 +212,7 @@ html body div#app div#display div#displayLowerPortion .layout {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 8rem;
-  border-right: 1px solid #CFD8DC;
+  border-right: 1px solid #cfd8dc;
 }
 
 html body div#app div#display div#displayLowerPortion .layout:last-child {
@@ -211,12 +225,12 @@ html body div#app div#display div#displayLowerPortion .layout div.dataIcon {
 
 html body div#app div#display div#displayLowerPortion .layout div.dataIcon svg {
   font-size: 5rem;
-  color: #4DD0E1;
+  color: #4dd0e1;
 }
 
 html body div#app div#display div#displayLowerPortion .layout div.dataIcon span.caption {
-  font-family: 'Itim', cursive;
-  color: #1A237E;
+  font-family: "Itim", cursive;
+  color: #1a237e;
 }
 
 html body div#app div#display div#displayLowerPortion .layout div.dataIcon span#humidityCaption {
@@ -234,18 +248,18 @@ html body div#app div#display div#displayLowerPortion .layout div.data {
   margin-top: auto;
   margin-bottom: auto;
   font-size: 1.8rem;
-  color: #1A237E;
-  font-family: 'Itim', cursive;
+  color: #1a237e;
+  font-family: "Itim", cursive;
 }
 
 html body div#app div#display div#displayLowerPortion .layout div.data span.inch {
   font-size: 1rem;
-  font-family: 'Itim', cursive;
+  font-family: "Itim", cursive;
 }
 
 html body div#app div#display div#displayLowerPortion .layout div.number {
   font-size: 2.5rem;
-  color: #1A237E;
+  color: #1a237e;
 }
 
 html body div#app div#display div#displayLowerPortion .layout div#humidity {
