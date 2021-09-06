@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Search from "./component/Search";
 import Display from "./component/Display";
-import Loader from "react-loader-spinner";
 import "./scss/App.css";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { css } from "@emotion/react";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function App() {
   const [cityName, setCityName] = useState("Kolkata");
@@ -47,12 +47,13 @@ function App() {
     }
   };
   useEffect(() => {
-    const id = setTimeout(() => {
-      fetchFucntion();
-    }, 2000);
-    return () => {
-      clearTimeout(id);
-    };
+    fetchFucntion();
+    // const id = setTimeout(() => {
+    //   fetchFucntion();
+    // }, 2000);
+    // return () => {
+    //   clearTimeout(id);
+    // };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -68,12 +69,11 @@ function App() {
         </div>
       ) : (
         <div id="loader">
-          <Loader
-            type="BallTriangle"
-            color="#00BFFF"
-            height={150}
-            width={150}
-            timeout={3000}
+          <ClimbingBoxLoader
+            loading={true}
+            color="#36D7B7"
+            css=""
+            speedMultiplier="1"
           />
         </div>
       )}
